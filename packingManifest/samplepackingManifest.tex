@@ -1,0 +1,48 @@
+%packingList.tex
+\documentclass{packingManifest}
+
+\renewcommand\email{dummy@eatabattery.com}
+\renewcommand\phone{(111) 222-3333}
+\renewcommand\website{eatabattery.com}
+\renewcommand\company{Eat A Battery LTD.}
+
+\renewcommand\addressA{123 Duracell Ave}
+\renewcommand\addressB{9V}
+\renewcommand\addressC{Scranton, PA 12345}
+\renewcommand\logo{logo}
+
+%--------------------------------------------------------
+% Customer Information
+\newcommand\shipMethod{USPS Priority}
+\newcommand\orderNumber{1}
+\newcommand\invoiceNumber{1}
+\newcommand\orderDate{\today}
+\newcommand\documentDate{\today}
+\newcommand\items{1}
+
+\newcommand\billingName{Smeagol}
+\newcommand\billingCompany{Mordor, LLC.}
+\newcommand\billingAddressA{1 Mount Doom}
+\newcommand\billingAddressB{Mordor, Middle Earth}
+\newcommand\billingAddressC{}
+
+%--------------------------------------------
+% leave uncommented if same as billing
+%\renewcommand\shippingName{\billingName}
+%\renewcommand\shippingCompany{\billingCompany}
+%\renewcommand\shippingAddressA{\billingAddressA}
+%\renewcommand\shippingAddressB{\billingAddressB}
+%\renewcommand\shippingAddressC{\billingAddressC}
+
+
+\begin{document}
+	\makePackagingList
+
+
+	\begin{orderItem}%This is a tabular environment with 6 fields
+	%\textbf{Ordered}& \textbf{Line Item}&\textbf{Location}&  \textbf{Item}& \textbf{Shipped}& \textbf{Backordered}\\\hline
+		19&1&&Rings of Power&19&0\\\hline
+		1&2&&The One Ring, to rule them all&1&0\\\hline
+	\end{orderItem}
+
+\end{document}

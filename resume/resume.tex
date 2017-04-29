@@ -1,0 +1,75 @@
+\documentclass{resume} % Use the custom resume.cls
+
+\usepackage{lipsum}
+
+\newcommand{\email}{dummy@eatabattery.com}
+\newcommand\phone{(111)~$\cdot$~222~$\cdot$~3333}
+\def\linkedin{Smeagol}
+\def\github{Smeagol}
+\name{Smeagol} %
+\address{\phone~$\diamond$~\email}
+\address{\linkedinaddress~~$\diamond$~~\githubaddress}
+
+\newcommand{\dummyJob}{
+	\item "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	\item "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	\item "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+}
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Education}
+\begin{rSubsection}{University of Duracell}{May 2016}{Battery Science}{Vancouver, BC}
+\item
+\end{rSubsection}
+\vspace{-1cm}
+stuff and things\\
+\vspace{-.6cm}
+\end{rSection}
+
+\vspace{-.2cm}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Experience}
+\begin{rSubsection}{Company A}{September 2016 - Present}{Software Designer \& Business Admin}{New York, NY}
+\dummyJob
+\end{rSubsection}
+\vspace{-.3cm}
+
+%------------------------------------------------
+
+\begin{rSubsection}{Company B}{April 2015 - September 2016}{Firmware Developer \& Research Intern}{Vancouver, BC}
+\dummyJob
+\end{rSubsection}
+\vspace{-.3cm}
+
+%------------------------------------------------
+
+\begin{rSubsection}{Company C}{May 2012 - August 2014}{Development Intern}{New York, NY}
+\dummyJob
+\end{rSubsection}
+\vspace{-.3cm}
+
+\end{rSection}
+\vspace{-.2cm}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Technical Strengths}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Languages			& C\&C++, Python, Matlab/Octave, Verilog, Maple, MySQL/MariaDB, LaTex, bash/zsh\\
+Hardware		 	& Analog \& Digital Design, ARM Cortex M0/3\\
+Software			& PCB layout (KiCAD/Diptrace/Eagle), LTSpice, Eclipse,\\
+					& Altera Quartus, Model Sim, ROOT/CINT\\
+Additional			& Relational database design, Linux, FreeBSD
+\end{tabular}
+
+\end{rSection}
+\end{document}

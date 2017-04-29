@@ -1,0 +1,78 @@
+\documentclass{labelFourBySix}
+
+\renewcommand\docType{Label}
+\renewcommand\productName{Thingy}
+\renewcommand\email{dummy@eatabattery.com}
+\renewcommand\phone{(111) 222-3333}
+\renewcommand\website{eatabattery.com}
+\renewcommand\company{Eat A Battery LTD.}
+
+\renewcommand\addressA{123 Duracell Ave, 9V}
+\renewcommand\addressB{Scranton, PA 12345}
+
+\renewcommand\logo{logo}
+\renewcommand\contactA{\website}
+\renewcommand\contactB{\email}
+
+
+\renewcommand\titleDescrip{tiel description}
+\begin{document}
+	\begin{backLabel}
+	\vspace{-2pt}
+	\begin{page}
+	\begin{minipage}{.95\linewidth}
+	\small
+	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+	\vspace{3pt}
+	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+	\end{minipage}
+
+
+	\begin{infoBox}{}
+	\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}l p{.5\linewidth}}
+		\textbf{Bandwidth:} & DC~-~1~MHz\\
+		\textbf{Transimpedance:} & 10~M$\Omega$\\
+		\textbf{Output Voltage:}&0~-~10~V\\
+		\end{tabular*}%\vspace{-8pt}
+%		\grayLine{.5\linewidth} \vspace{-9pt}
+
+		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}p{.3\linewidth}cc}
+		\textbf{NEP @ 840~nm}& \textbf{Model A} &\textbf{Model B}\\\hline
+		\textbf{DC - 20~kHz:} & 70~fW/Hz$^{1/2}$ &70~fW/Hz$^{1/2}$\\
+		\textbf{DC - 100~kHz:} & 80~fW/Hz$^{1/2}$& 70~fW/Hz$^{1/2}$\\
+		\textbf{DC - 1~MHz:} & 170~fW/Hz$^{1/2}$ & 125~fW/Hz$^{1/2}$
+		\end{tabular*}
+	\end{infoBox}
+
+	\iffalse
+	\begingroup
+		\begin{center}
+		\includegraphics[height=1.5in]{lunch}
+		\end{center}
+		\small{"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+	\endgroup
+	\fi
+
+	\begin{infoBox}{Stuff}
+	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+	\textbf{Website: }\website
+	\end{infoBox}\vspace{-6pt}
+
+	\begin{infoBox}{OEM \& Consulting}
+	Need OEM quantities or something special?  Email us at inquiry@\website
+	For design and consulting inquiries, contact us at \email
+	\end{infoBox}\vspace{-6pt}
+	\begin{infoBox}{}
+		\begin{tabular}{l l}
+		\textbf{Product Page:} &\website/duracell\\
+		\textbf{User Manual:} &\website/manual\\
+		\end{tabular}
+	\end{infoBox}\vspace{-6pt}
+
+	\makeContactInfo
+	\end{page}
+	\end{backLabel}
+
+\end{document}

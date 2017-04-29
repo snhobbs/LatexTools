@@ -1,0 +1,107 @@
+\documentclass{manual}
+
+\DeclareGraphicsExtensions{.pdf,.png, .jpg,.JPG, .eps}
+\graphicspath{ {./} }
+
+\input{glossaries}
+\setglossarystyle{tree}
+
+\bibliography{references}
+
+\newcommand\email{dummy@eatabattery.com}
+\newcommand\phone{(111) 222-3333}
+\newcommand\website{eatabattery.com}
+\newcommand\company{Eat A Battery LTD.}
+
+\newcommand\addressA{123 Duracell Ave, 9V}
+\newcommand\addressC{Scranton, PA 12345}
+\newcommand\logo{logo.eps}
+
+\newcommand\docTitle{User Manual}
+
+\def\lineColor{eoilogo}
+\def\templateLineLengthPt{462pt}
+
+\hypersetup{
+    %bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={\docTitle},    % title
+    pdfauthor={\company},     % author
+    pdfsubject={\docType},   % subject of the document
+    pdfkeywords={}, % list of keywords
+        pdfnewwindow=true,      % links in new PDF window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkbordercolor=webblue,
+    citebordercolor=green,
+    filebordercolor=blue,
+    urlbordercolor=magenta,
+    linkcolor=darkblue,          % color of internal links (change box color with linkbordercolor)
+    citecolor=darkblue,     % color of links to bibliography
+    filecolor=darkblue,   % color of file links
+    urlcolor=darkblue,        % color of external links
+    linktoc=page,
+}
+
+%\setlength{\headheight}{.3in}
+%\setlength{\headsep}{.1in}
+%\setlength{\footskip}{.1in}
+%%\renewcommand{\headdrop}{0pt}
+%%\renewcommand{\textheight}{350pt}
+
+%\setlength{\textwidth}{7in}
+%\setlength{\oddsidemargin}{.4in}
+%\setlength{\evensidemargin}{.4in}
+%\setlength{\topmargin}{.4in}
+%\setlength{\bottommargin}{.4in}
+%\setlength{\textheight}{9.5in}
+\setsecheadstyle{\large\bfseries\raggedright}
+\fontfamily{pnc}
+
+\begin{document}
+
+\author{\name}
+\title{\textbf{Title}\\Goes Here}
+\def\secTitle{\docType}
+\def\edition{Rev. 1.23}
+\def\logoName{logo}
+\def\productPic{lunch}
+
+\titleGM
+\makeDescriptPage
+
+\begin{frontmatter}
+\makeLegal
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\makeIntro
+%\listoffigures
+%\clearpage
+%\listoftables
+%\clearpage
+
+\end{frontmatter}
+
+\begin{mainmatter}
+\setcounter{page}{2}
+\pagestyle{pageWithLines}
+%\include{document}
+\end{mainmatter}
+
+\begin{backmatter}
+\pagestyle{backmatter}
+\renewcommand{\currChapter}{References}
+\printbibliography[title=References]
+
+\renewcommand{\currChapter}{Table of Symbols}
+\printglossary[title=Table of Symbols]
+
+\newpage
+\makeLastPage
+\end{backmatter}
+
+\end{document}
