@@ -1,0 +1,154 @@
+\documentclass[masters]{ucbthesis}
+\usepackage{xcolor}%
+\definecolor{webblue}{rgb}{0, 1, 1}  % less intense blue
+\definecolor{webred}{rgb}{0.25, 0.05, 0}   % less intense red
+\usepackage[linkbordercolor = webblue]{hyperref}
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={\@title},    % title
+    pdfauthor={\@author},     % author
+    pdfsubject={Thesis},   % subject of the document
+    pdfkeywords={}, % list of keywords
+	pdfnewwindow=true,      % links in new PDF window
+    colorlinks=false,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=lightgray,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan,           % color of external links
+    linktoc=page,
+}
+
+\usepackage{hypcap}
+\usepackage{biblatex}
+\fontfamily{pcr}
+\usepackage[nonumberlist, xindy]{glossaries}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{bm}% bold math
+
+%\usepackage{ulem} THIS BREAKS SHIT
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{subcaption}
+
+
+\usepackage{epstopdf}
+%\newtheorem{theorem}{Jibberish}
+
+\usepackage{glossary-mcols}
+\usepackage{booktabs}
+
+\DeclareGraphicsExtensions{.pdf,.png, .jpg,.JPG}
+\graphicspath{ {../images/} }
+\setlength{\textwidth}{16.2cm}
+\setlength{\oddsidemargin}{0.3cm}
+\setlength{\evensidemargin}{0.3cm}
+\setlength{\topmargin}{-0.3cm}
+\setlength{\textheight}{22.2cm}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+%\bibliographystyle{unsrt}
+
+
+\hyphenation{mar-gin-al-ia}
+
+% \FIXME{} is a useful macro for noting things needing to be changed.
+% The following definition will also output a warning to the console
+\newcommand{\FIXME}[1]{\typeout{**FIXME** #1}\textbf{[FIXME: #1]}}
+
+%glossary terms
+
+\input{glossaries}
+\setglossarystyle{tree}
+
+\bibliography{references}
+\setcounter{secnumdepth}{5}
+
+%\def\dsp{\def\baselinestretch{2.0}\large\normalsize}
+\dsp
+\pdfminorversion=5
+\pdfobjcompresslevel=3
+\pdfcompresslevel=9
+
+
+\begin{document}
+
+
+\title{Study and Development of Pulse-shape Discrimination Firmware for Background Mitigation in the DEAP Experiment}
+\author{Timothy J. Author}
+
+\universityName{University of West Shamu}
+\facultyName{Faculty of Science}
+
+\degreesemester{April}
+\degreeyear{2016}
+\degree{Bachelor of Basket Weaving}
+\chair{Professor Richard Feynmann}
+\othermembers{Professor Roger Spam \\
+  Associate Professor Michael Chex}
+\numberofmembers{3}
+\prevdegrees{B.A. (University of Northern South Dakota at Hoople) 1978 \\
+  M.S. (Ed's School of Quantum Mechanics and Muffler Repair) 1989}
+\field{Physics}
+\campus{Sea World}
+
+\maketitle
+
+%\approvalpage
+%\copyrightpage
+
+\include{abstract}
+
+\begin{frontmatter}
+
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
+\printglossary[title=Table of Symbols]
+
+\begin{acknowledgements}
+I would like to thank Ipsum Lorem who told me: "\blindtext"
+\end{acknowledgements}
+
+\begin{dedication}
+	\null\vfil
+	\begin{center}
+		\textit{
+		"Don't sweat the petty things, and don't pet the sweaty things."\\
+		--- George Carlin
+		}
+	\end{center}
+	\vfil\null
+\end{dedication}
+
+%\numberofmembers{3}
+
+\end{frontmatter}
+\pagestyle{headings}
+\include{chap1}
+%\include{chap2}
+%\include{chap3}
+%\include{chap4}
+%\include{chap5}
+%\include{conclusion}
+\nocite{*}
+\printbibliography
+%\include{appendix_a}
+
+\end{document}
